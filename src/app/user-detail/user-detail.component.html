@@ -1,0 +1,28 @@
+<mat-card class="user-detail-header">
+    <button class="icon-more" [matMenuTriggerFor]="userMenu" mat-icon-button aria-label="Example icon button with a menu icon">
+        <mat-icon >more_vert</mat-icon>
+      </button>
+    <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="editUserDetail()">Edit</button>
+    </mat-menu>
+    <img src="assets/img/profileLogo.jfif" alt="">
+    <div class="details">
+        <h2>{{user.firstName}} {{user.lastName}}</h2>
+        <span>{{user.email}}</span>
+    </div>
+</mat-card>
+<mat-card class="mt-32">
+    <button class="icon-more" [matMenuTriggerFor]="addressMenu" mat-icon-button aria-label="Example icon button with a menu icon">
+        <mat-icon >more_vert</mat-icon>
+      </button>
+    <mat-menu #addressMenu="matMenu">
+        <button mat-menu-item (click)="editMenu()">Edit</button>
+    </mat-menu>
+
+    <mat-card-title>
+        <h1>{{user.street}}</h1>
+    </mat-card-title>
+    <mat-card-content>
+        {{user.city}} <br> {{user.zipCode}}
+    </mat-card-content>
+</mat-card>
