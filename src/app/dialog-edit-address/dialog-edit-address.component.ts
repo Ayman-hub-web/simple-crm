@@ -27,6 +27,8 @@ userId:string | any;
       this.progress = false;
       this.dialogRef.close();
     });
+
+    console.log('userID', this.firestore.collection('users'));
   }
 
 }

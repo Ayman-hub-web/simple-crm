@@ -1,14 +1,20 @@
 <mat-card>
     <table class="user-table">
         <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>E-Mail</th>
             <th>City</th>
+            <th>Action</th>
         </tr>
-        <tr *ngFor="let user of allUsers, let i= index" [routerLink]="['/user', user['CustomName']]">
+        <tr *ngFor="let user of allUsers; let i= index;" [routerLink]="['/user', user['CustomName']]">
+            <td>{{user['CustomName']}}</td>
             <td>{{user['firstName']}}</td>
             <td>{{user['email']}}</td>
             <td>{{user['city']}}</td>
+            <td><button mat-fab color="warn">
+                <mat-icon (click)="deleteItem()">delete</mat-icon>
+              </button></td>
         </tr>
     </table>
 </mat-card>

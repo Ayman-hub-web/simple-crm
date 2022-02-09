@@ -33,6 +33,8 @@ import {MatCardModule} from '@angular/material/card';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
+
 
 
 
@@ -46,7 +48,8 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
     DialogAddUserComponent,
     UserDetailComponent,
     DialogEditAddressComponent,
-    DialogEditUserComponent
+    DialogEditUserComponent,
+    DeleteUserComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

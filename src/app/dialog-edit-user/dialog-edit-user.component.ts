@@ -28,6 +28,7 @@ export class DialogEditUserComponent implements OnInit {
       this.progress = false;
       this.dialogRef.close();
     });
+    console.log('userId', this.userId);
   }
 
 }

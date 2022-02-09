@@ -8,19 +8,23 @@
 
 .sidenav {
     width: 300px;
+    background-color: #f1eeee;
 }
 
 .logo-container {
-    border-bottom: 1px solid rgba(155, 97, 97, 0.04);
+    border-bottom: 1px solid rgba(204, 209, 209, 0.04);
     padding-left: 16px;
     padding-right: 16px;
     min-height: 56px;
     display: flex;
     align-items: center;
+    width: 100%;
     img {
+        width: 300px;
         max-width: 100%;
-        height: 100px;
-        object-fit: cover;
+        height: 56px;
+        object-fit: contain;
+        background-color: white;
     }
 }
 

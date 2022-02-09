@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import {MatDialog} from '@angular/material/dialog';
 import { User } from 'src/models/user.class';
@@ -12,6 +12,7 @@ import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.compo
 export class UserComponent implements OnInit {
   user = new User();
   allUsers=[];
+  userId:string|any;
   constructor(private firestore:AngularFirestore, public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -25,6 +26,9 @@ export class UserComponent implements OnInit {
   }
   openDialog(){
     this.dialog.open(DialogAddUserComponent);
+  }
+  deleteItem(){
+    console.log('userId für user.component', this.allUsers);
   }
 
 }
